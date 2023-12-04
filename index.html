@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script defer src="script.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Labs</title>
+</head>
+<body>
+    <header>
+        <h1>My labs</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Input type Switch</h2>
+            
+            <label for="checkbox" class="switch">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <span>Switch Button</span>
+            </label>
+        </section>
+
+        <section>
+            <h2>Input Datalist</h2>
+            <p>Suggestion automatique native</p>
+
+            <input list="frameworks" class="datalist">
+            <datalist id="frameworks">
+                <option>Bootstrap</option>
+                <option>Tailwind CSS</option>
+                <option>Foundation</option>
+                <option>Bulma</option>
+                <option>Skeleton</option>
+            </datalist>
+        </section>
+
+        <section>
+            <h2>Color Picker</h2>
+            <p>Sélecteur de couleurs avec affichage valeur couleur Hex.</p>
+            <label for="color_picker" class="colorpicker">
+                <input type="color" name="color_picker" id="color_picker">
+                <span id="color_val"></span>
+            </label>
+        </section>
+
+        <section>
+            <h2>Accordéons</h2>
+            <details class="details">
+                <summary>Mon accordéon</summary>
+                <p>Contenu de mon accordéon</p>
+            </details>
+        </section>
+    </main>
+
+</body>
+</html>

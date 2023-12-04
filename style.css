@@ -1,0 +1,185 @@
+/* ==========================================================================
+  Import
+  ========================================================================== */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ==========================================================================
+  Reset CSS
+  ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+  Common CSS
+  ========================================================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+h1 {
+    margin-bottom: 0.6rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+header,
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 2rem;
+}
+
+/* ==========================================================================
+  Custom CSS
+  ========================================================================== */
+
+/*
+  Custom Switch
+  ========================================================================== */
+
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.switch input {
+    position: relative;
+    display: inline-block;
+    height: 1.65rem;
+    width: 2.75rem;
+    
+    appearance: none;
+    vertical-align: middle;
+    border-radius: 2rem;
+    background-color: lightgrey;
+    box-shadow: 0 1px 3px #0003 inset;
+    transition: 0.25s linear background;
+}
+
+.switch input::before {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 1px 3px #0003;
+    transition: 0.25s linear transform;
+    transform: translateX(0);
+}
+
+.switch input:checked {
+    background-color: green;
+}
+
+.switch input:checked::before {
+    transform: translateX(1rem);
+}
+
+.switch input:focus {
+    outline-color: transparent;
+}
+
+.switch input:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+}
+
+/*
+  Datalist
+  ========================================================================== */
+
+.datalist {
+    padding: 12px 16px;
+    border: 1px solid;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+}
+
+
+/*
+  Color Picker (Round)
+  ========================================================================== */
+
+.colorpicker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.colorpicker #color_val {
+    text-transform: uppercase;
+}
+
+.colorpicker input[type="color"] {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    /* outline: none;
+    -webkit-appearance: none; */
+}
+
+.colorpicker input[type="color"]:focus {
+    outline-color: transparent;
+}
+
+.colorpicker input[type="color"]:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+}
+
+.colorpicker input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+.colorpicker input[type="color"]::-webkit-color-swatch {
+	border: none;
+    border-radius: 50%;
+}
+
+
+/*
+  Details with icon marker
+  ========================================================================== */
+summary::marker,
+summary::-webkit-details-marker {
+    font-size: 1.5em;
+    content: "📬";
+}
+
+[open] summary::marker,
+[open] summary::-webkit-details-marker {
+    font-size: 1.5em;
+    content: "📭";
+}
+
+summary:hover,
+summary:focus {
+  cursor: pointer;
+  background: yellowgreen;
+}
